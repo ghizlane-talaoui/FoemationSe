@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -60,8 +61,10 @@ public static Object[][]data1(){
 	  String browser = "firefox";
 	  if(browser.equalsIgnoreCase("firefox")) {
 	  
-	  System.setProperty("webdriver.gecko.driver","C:\\Users\\FORMATION\\Downloads\\Formation SE\\geckodriver.exe");
-	  driver= new FirefoxDriver();
+		  System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver.exe");
+		  FirefoxOptions option=new FirefoxOptions();
+		  option.addArguments("--headless");
+	  driver= new FirefoxDriver(option);
 	}else if(browser.equalsIgnoreCase("chrome")) {
 		
 		 System.setProperty("webdriver.gecko.driver","C:\\Users\\FORMATION\\Downloads\\Formation SE\\geckodriver.exe");
