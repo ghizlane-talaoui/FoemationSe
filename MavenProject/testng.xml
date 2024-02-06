@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Ma première suite de test" parallel="tests">
+
+<test name="Test avec Firefox">
+<parameter name="browser" value="firefox" />
+<classes>
+<class name="test.MonPremierScript"/>
+</classes>
+</test>
+<test name="Test avec chrome">
+<parameter name="browser" value="chrome" />
+<classes>
+<class name="test.MonPremierScript"/>
+</classes>
+</test>
+</suite>
