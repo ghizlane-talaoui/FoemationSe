@@ -61,7 +61,7 @@ public static Object[][]data1(){
 	  String browser = "firefox";
 	  if(browser.equalsIgnoreCase("firefox")) {
 	  
-		  System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver.exe");
+		  System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");
 		  FirefoxOptions option=new FirefoxOptions();
 		  option.addArguments("--headless");
 	  driver= new FirefoxDriver(option);
